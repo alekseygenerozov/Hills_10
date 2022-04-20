@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+
+
+		<style type="text/css">
+        p { text-align: left;
+        }
+        .reveal section img { background:none; border:none; box-shadow:none; max-width: none; max-height: none;}
+        .reveal li {text-align: left; font-size: 55px;}
+        .reveal table {frame: box; font-size: 60px;}
+        .reveal ul {  display: block; text-align: left; margin: 0 0 0 1em;}
+        .reveal h4 {text-align: left;}
+        .reveal h3 {text-align: left;}
+        .reveal h2 {text-align: left;}
+        .reveal h1 {text-align: left;}
+        .reveal div {padding: 10px;}
+        .reveal table { border-collapse: collapse; }
+        figure {position: relative; top:0px;}
+        .reveal td, th {border: 5px solid white !important;}
+
+        /*.reveal .slides > section > section { text-align:left; }*/
+/*        .reveal .center {text-align: left;}*/
+        .reveal .lcred {
+    	text-align: left;
+    	font-size: 55% !important;
+		}
+		.figt figcaption {position: absolute; left: 0px; top: -50px; text-align: center; font-size: 85%; background: rgba(0, 0, 0, 0);}
+		.figb figcaption {position: absolute; bottom: -50px; text-align: center; font-size: 85%;}
+/*		.figl figcaption {position: absolute; right: 10%; top:150px ; text-align: left; font-size: 60%;}
+*/		.hh {font-weight:bold !important; color: cyan; font-style: italic !important;}
+		.container{
+	    display: flex;
+	   	margin: 100px;
+	   	flex-wrap: wrap;
+
+		}
+		.col{
+	    	flex: 1;
+		}
+/*		.video-wrapper {
+ 		 position: relative;
+  		 height: 100%;
+  		 padding-top: 25px;
+  		 width: 100;
+  		 margin: 100;
+		}*/
+
+/*		.video {horizontal-align: right;}
+*/
+		.column {
+	  	width: 50%
+	  	height: 100%;
+	  	clear: bottom;
+	    }
+
+		.row:{
+  		content: "";
+  		display: table;
+  		clear: both;
+		}
+
+		.reveal .slides section .fragment.step-fade-in-then-out {
+		opacity: 0;
+		display: none; }
+		.reveal .slides section .fragment.step-fade-in-then-out.current-fragment {
+		opacity: 1;
+		display: inline; }
+		.videoWrapper {
+		  position: relative;
+		  padding-bottom: 1000%; /* 16:9 */
+		  height: 4000;
+		}
+		.videoWrapper iframe {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 1000%;
+		  height: auto;
+		}
+
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+		    <!-- In between the <div="reveal"> and the <div class="slides">-->
+			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
+<!-- 			<header style="position: absolute; left: 10px;"></header> -->
+<!-- 			<header class="right" style="position: absolute; right: 10px;"></header> -->
+			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
+			<div class="slides">
+				<section>
+					<h1>Formation and evolution of young stars in the Galactic Center</h1>
+					<h3>Aleksey Generozov</h3>
+					<h3>Technion</h3>
+
+
+
+				</section>
+
+
+
+				<section>
+							<div style="width=1200; height=100%; float: left;">
+								<video width=1200 muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+							</div>
+							<div class="container">
+							<div class="col">
+							<ul>
+								<li>Galactic Center S Stars
+								Eckart&Genzel1997, Ghez+1998
+								<li class=fragment>Perets+2007: Binaries scattered from
+									large distance.
+								<li class=fragment>Madigan+2009*: Binary disruptions
+								from instability in disk.
+							</ul>
+							</div>
+							</div>
+							<aside class="notes">
+							Mention isotropic star cluster.
+							</aside>
+
+				</section>
+
+
+
+
+
+				<section>
+					<h2>Disk/S star Connection</h2>
+					<div class="container">
+						<div class="col">
+						<ul>
+							<li class=fragment>Similar ages (Habibi+2017)
+							<li class=fragment>S5-HVS1 (~1700 km s$^{-1}$ velocity;<br>Koposov+2020)
+						</ul>
+				    </div>
+
+
+						<div class="col" >
+						<div  class="fragment step-fade-in-then-out" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
+								<figure class=figt>
+									<video id="myVideo" width=1000 muted controls align=right>
+									<source src="figures/disk1.webm" type="video/webm">
+									<script>
+															var pausing_function = function(){
+															    if(this.currentTime >= 2) {
+															        this.pause();
+															        // remove the event listener after you paused the playback
+															        this.removeEventListener("timeupdate",pausing_function);
+															    }
+															};
+															var vid = document.getElementById("myVideo");
+															vid.addEventListener("timeupdate", pausing_function);
+									</script>
+									</video>
+								<figcaption font-size=50>
+									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+								</figcaption>
+								</figure>
+						</div>
+						<div  class=fragment style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
+							<figure class=figt>
+							<video width=1000 muted controls><source data-src="figures/disk1.webm" type="video/webm"></video>
+							<figcaption font-size=50>
+								N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+							</figcaption>
+							</figure>
+						</div>
+						</div>
+				</section>
+
+				<section>
+					<h2>Formation: Molecular cloud disruption</h2>
+					<ul>
+						<li class=fragment>Bonell&Rice 2008, Gualandris et 2012
+						<li class=fragment>Eccentric disc, but no extreme eccentricities
+						<li class=fragment>Try to find conditions that work (Generozov, Nayakshin, and Madigan 2022)
+					</ul>
+				</section>
+
+				<section>
+					<h2>Simulation setup</h2>
+					<img width=1700 src="figures/simulation_schematic.svg" align=left >
+				</section>
+
+				<section>
+					<h2>Simulation setup</h2>
+					<img width=1700 src="figures/simulation_schematic_b.svg" align=left >
+				</section>
+
+				<section>
+					<h2>Simulation setup</h2>
+					<img width=1700 src="figures/simulation_schematic_c.svg" align=left >
+				</section>
+
+				<section>
+					<h2>Simulation setup</h2>
+					<ul>
+						<li class=fragment>Gadget3, SPH, Springel 2005
+						<li class=fragment>400K particles
+						<li class=fragment>Cooling/Star formation (sink particles)
+					</ul>
+				</section>
+
+				<section>
+					<h2>Background density</h2>
+					<ul>
+						<li class=fragment>Controls precession!
+						<li class=fragment>Assume fixed $r^{-1.16}$ density (Schodel+2018)
+						<li class=fragment>$1.2\times 10^6 M_{\odot}$ inside central pc.
+					</ul>
+
+				</section>
+
+
+				<section>
+					<h2>Evolution of example cloud</h2>
+					<div class="container">
+						<div class="column">
+							<video width=1350 src="figures/movie-cloud1-R05-snap2.mp4" controls >
+						</div>
+						<div class="col">
+							<ul>
+								<li>~0.5 pc across
+								<li>~$10^5-2\times10^5 $ yr
+							</ul>
+						</div>
+					</div>
+				</section>
+
+<!-- Make this section shorter! Just mention counter-rotating populations -->
+				<section><h2>Angular momentum distribution of the disc</h2>
+					<img src="figures/lz_gas_0.0.svg" width="1800" align="left">
+				</section>
+
+				<section><h2>Angular momentum distribution of the disc</h2>
+					<img src="figures/lz_gas_400.0.svg" width="1800" align="left">
+				</section>
+
+				<section><h2>Angular momentum distribution of the disc</h2>
+					<img src="figures/lz_gas_1470.0.svg" width="1800" align="left">
+				</section>
+
+				<section><h2>Angular momentum distribution of the disc</h2>
+					<img src="figures/lz_all_1470.0.svg" width="1800" align="left">
+				</section>
+
+				<section><h2>Continuing evolution of eccentric disc</h2>
+					<div>
+						   <img width=900 data-src="figures/surf_density.png" align="left"/>
+					</div>
+					<div style>
+							<video  muted controls width=1000 align=right><source data-src="figures/sim_movie_man_v2.webm" type="video/webm" /></video>
+					</div>
+				</section>
+
+				<section><h2>Bulk properties: Eccentricity </h2>
+					<img src="figures/e_if1.svg" width="1800" align="left">
+				</section>
+
+				<section><h2>Bulk properties: Eccentricity </h2>
+					<img src="figures/e_if1_cut.svg" width="1800" align="left">
+				</section>
+
+
+				<section><h2>Bulk properties: Surface density </h2>
+					<img src="figures/surf_dens_obs.svg" width="1800" align="left">
+				</section>
+
+				<section><h2>Caveats</h2>
+					<ul>
+						<li class=fragment>Initial conditions
+						<li class=fragment>Gas at late times
+						<li class=fragment>Fixed background density
+						<li class=fragment>No mass function
+					</ul>
+				</section>
+
+
+				<section><h2>Conclusions</h2>
+					<ul>
+						<li class=fragment> Cloud disruption can explain young disc in Galactic center.
+						<li class=fragment> S stars produced by binary disruptions.
+						<li class=fragment> Mass and velocity of initial cloud can be constrained.
+						<li class=fragment> Ejected stars.
+						<li class=fragment> HVS velocity distribution: Tension
+							between theory and observations...
+					</ul>
+				</section>
+
+				<!------------------------------------------------------------------------------>
+
+				<section><h2>[INCLINATION DISTRIBUTION]</h2>
+					<img src="figures/inclination_cloud_1_hres_plot.png" width="1000" align="left">
+				</section>
+
+				<section><h2>[INCLINATION DISTRIBUTION]</h2>
+					<img src="figures/inclination_cloud_1_hres_cumul_plot.png" width="1000" align="left">
+				</section>
+
+
+
+				<section><h2>Dependence on background density profile [PARTIAL TESTS ON DENSITY PROFILE IN LOW RESOLTION NBODY SIMS--Results are insensitive...]</h2>
+					<ul>
+						<li class=fragment> Steady-state density profile is steeper
+						<li class=fragment> $r^{-1.5}-r^{-1.75}$ for low mass stars
+						<li class=fragment> $r^{-2}$ for stellar mass black holes...
+					</ul>
+				</section>
+
+				<section><h2>Dependence on background density profile</h2>
+					<ul>
+						<li class=fragment> Experimented with steeper density in N-body
+						<li class=fragment> Similar number of disruption?!
+						<li class=fragment> Disc starts with a strong primordial 'twist'
+					</ul>
+				</section>
+
+				<section><h2>Primordial twist of the disc</h2>
+					<img align="left" width=1100 src="figures/Cloud1_twisty.svg"/>
+				</section>
+
+				<section><h2>Resolution</h2>
+					<img align="left" width=1100 src="figures/tab_res.png">
+				</section>
+
+				<section><h2>Conditions for disruptions</h2>
+					<img align="left" width="1800" src="figures/jlc_plot_a.svg">
+				</section>
+
+
+				<section><h2>Preliminary results on the effects of the mass function</h2>
+					<img src="figures/e_if1_cut_mf.svg" width="1800" align="left">
+				</section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				slideNumber:true,
+				width: 1920,
+				height: 1080,
+				// Factor of the display size that should remain empty around the content
+				margin: 0.03,
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.2,
+				maxScale: 1.5,
+				history: true,
+				transition: 'none',
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},
+				dependencies: [
+				    { src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					// { src: 'plugin/math/math.js', async: true }
+
+				]
+			});
+		</script>
+		<!-- <script src="pdfjs/src/pdf.js"></script> -->
+	</body>
+</html>
