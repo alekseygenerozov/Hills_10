@@ -124,7 +124,25 @@
 
 				<section>
 							<div style="width=1200; height=100%; float: left;">
-								<video width=1200 muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+								<video width=1200 muted controls><source src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+							</div>
+							<div class="container">
+							<div class="col">
+							<ul>
+								<li>Galactic Center S Stars
+								Eckart&Genzel1997, Ghez+1998
+							</ul>
+							</div>
+							</div>
+							<aside class="notes">
+							Mention isotropic star cluster.
+							</aside>
+
+				</section>
+
+				<section>
+							<div style="width=1200; height=100%; float: left;">
+								<video width=1200 data-autoplay><source src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
 							</div>
 							<div class="container">
 							<div class="col">
@@ -160,35 +178,37 @@
 
 
 						<div class="col" >
-						<div  class="fragment step-fade-in-then-out" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
+							<div  class="fragment" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
 								<figure class=figt>
 									<video id="myVideo" width=1000 muted controls align=right>
-									<source src="figures/disk1.webm" type="video/webm">
-									<script>
-															var pausing_function = function(){
-															    if(this.currentTime >= 2) {
-															        this.pause();
-															        // remove the event listener after you paused the playback
-															        this.removeEventListener("timeupdate",pausing_function);
-															    }
-															};
-															var vid = document.getElementById("myVideo");
-															vid.addEventListener("timeupdate", pausing_function);
-									</script>
+									<source src="figures/cut1.webm" type="video/webm">
 									</video>
 								<figcaption font-size=50>
 									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
 								</figcaption>
 								</figure>
-						</div>
-						<div  class=fragment style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
-							<figure class=figt>
-							<video width=1000 muted controls><source data-src="figures/disk1.webm" type="video/webm"></video>
-							<figcaption font-size=50>
-								N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
-							</figcaption>
-							</figure>
-						</div>
+							</div>
+							<div  class="fragment" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
+								<figure class=figt>
+									<video id="myVideo" width=1000 muted controls align=right data-autoplay>
+									<source src="figures/cut1.webm" type="video/webm">
+									</video>
+								<figcaption font-size=50>
+									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+								</figcaption>
+								</figure>
+							</div>
+							<div  class="fragment" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
+								<figure class=figt>
+									<video id="myVideo" width=1000 muted controls align=right data-autoplay>
+									<source src="figures/cut2.webm" type="video/webm">
+									</video>
+								<figcaption font-size=50>
+									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+								</figcaption>
+								</figure>
+							</div>
+
 						</div>
 				</section>
 
@@ -251,6 +271,21 @@
 					</div>
 				</section>
 
+				<section>
+					<h2>Evolution of example cloud</h2>
+					<div class="container">
+						<div class="column">
+							<video width=1350 src="figures/movie-cloud1-R05-snap2.mp4" controls data-autoplay>
+						</div>
+						<div class="col">
+							<ul>
+								<li>~0.5 pc across
+								<li>~$10^5-2\times10^5 $ yr
+							</ul>
+						</div>
+					</div>
+				</section>
+
 <!-- Make this section shorter! Just mention counter-rotating populations -->
 				<!-- <section><h2>Angular momentum distribution of the disc</h2>
 					<img src="figures/lz_gas_0.0.svg" width="1800" align="left">
@@ -274,6 +309,15 @@
 					</div>
 					<div style>
 							<video  muted controls width=1000 align=right><source data-src="figures/sim_movie_man_v2.webm" type="video/webm" /></video>
+					</div>
+				</section>
+
+				<section><h2>Continuing evolution of eccentric disc</h2>
+					<div>
+							 <img width=900 data-src="figures/surf_density.png" align="left"/>
+					</div>
+					<div style>
+							<video  muted controls width=1000 align=right data-autoplay><source data-src="figures/sim_movie_man_v2.webm" type="video/webm" /></video>
 					</div>
 				</section>
 
